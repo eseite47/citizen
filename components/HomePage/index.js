@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {StyleSheet, Text, View, Image, Button } from 'react-native';
+import {StyleSheet, Text, View, Image, Button, TouchableNativeFeedback } from 'react-native';
 import {Font} from 'expo'
 
 import Header from '../Header'
@@ -28,24 +28,17 @@ class HomePage extends React.Component {
           fontLoaded ? ( 
             <View style={styles.NavOptions}>
               <Text style={styles.textHeader}>What are we studying today?</Text>
-              {/* <Text style={styles.text}>American Government</Text> */}
-              <Button
-                style={styles.text}
-                title="American Government"
-                onPress={() => this.props.navigation.navigate('Gov')}
-              />
-              {/* <Text style={styles.text}>History and Geography</Text> */}
-              <Button
-                style={styles.text}
-                title="History and Geography"
-                onPress={() => this.props.navigation.navigate('HistGeo')}
-              />
-              {/* <Text style={styles.text}>Everything </Text> */}
-              <Button
-                style={styles.text}
-                title="Everything"
-                onPress={() => this.props.navigation.navigate('All')}
-              />
+              <TouchableNativeFeedback onPress={() => this.props.navigation.navigate('Gov')}>
+                <Text style={styles.text}>
+                  American Government
+                </Text>
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={() => this.props.navigation.navigate('HistGeo')}>
+                <Text style={styles.text}>History and Geography</Text>
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={() => this.props.navigation.navigate('All')}>
+                <Text style={styles.text}>Everything </Text>
+              </TouchableNativeFeedback>
             </View>
           ) : null
         }
@@ -76,9 +69,9 @@ const styles = StyleSheet.create({
     fontSize: 20
   },
   text: {
-    lineHeight: 50,
+    lineHeight: 40,
     fontFamily: 'Poiret One',
-    fontSize: 30
+    fontSize: 25
   }
 });
 
