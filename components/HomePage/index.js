@@ -29,15 +29,25 @@ class HomePage extends React.Component {
             <View style={styles.NavOptions}>
               <Text style={styles.textHeader}>What are we studying today?</Text>
               <TouchableNativeFeedback onPress={() => this.props.navigation.navigate('Gov')}>
-                <Text style={styles.text}>
-                  American Government
-                </Text>
+                <View style={styles.button}>
+                  <Text style={styles.text}>
+                    American Government
+                  </Text>
+                </View>
               </TouchableNativeFeedback>
               <TouchableNativeFeedback onPress={() => this.props.navigation.navigate('HistGeo')}>
-                <Text style={styles.text}>History and Geography</Text>
+                <View style={styles.button}>
+                  <Text style={styles.text}>
+                    History and Geography
+                  </Text>
+                </View>
               </TouchableNativeFeedback>
               <TouchableNativeFeedback onPress={() => this.props.navigation.navigate('All')}>
-                <Text style={styles.text}>Everything </Text>
+                <View style={styles.button}>
+                  <Text style={styles.text}>
+                    Everything 
+                  </Text>
+                </View>
               </TouchableNativeFeedback>
             </View>
           ) : null
@@ -72,6 +82,16 @@ const styles = StyleSheet.create({
     lineHeight: 40,
     fontFamily: 'Poiret One',
     fontSize: 25
+  },
+  button: {
+    marginBottom: 25,
+    width: 300,
+    height: 50,
+    alignItems: 'center',
+    borderColor: '#2196F3',
+    borderRadius: 4,
+    borderWidth: 0.5,
+    // FontColor: 'white',
   }
 });
 
