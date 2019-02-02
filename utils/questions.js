@@ -727,7 +727,7 @@ module.export = [
   }, {
     category: 'history-geo' ,
     type: 'symbols',
-    question: 'Why does the flag have 50 stars?*',
+    question: 'Why does the flag have 50 stars?',
     answer: [
       'because there is one star for each state',
       'because each star represents a state',
