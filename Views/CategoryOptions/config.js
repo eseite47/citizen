@@ -44,7 +44,7 @@ categoryOptions = {
           category: 'history-geo',
           type: 'history-colonial'
         },
-        text: 'Colonial Period and Independence'
+        text: 'The 1600s and 1700s'
       },
       {
         onPressNav: 'FlashCardView',

@@ -62,7 +62,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   NavOptions: {
-    flex:4,
+		flex:4,
+		margin: 20,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
