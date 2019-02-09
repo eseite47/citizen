@@ -1,11 +1,12 @@
 import React from 'react';
 import {StyleSheet, Text, View } from 'react-native';
 import {Font} from 'expo'
+import { getQuestions } from '../../utils/getQuestions'
 
 class GovCards extends React.Component {
-//   state = {
-//     fontLoaded: false,
-//   };
+  state = {
+    questions: []
+  };
 
 //   async componentDidMount() {
 //     await Font.loadAsync({
@@ -14,11 +15,20 @@ class GovCards extends React.Component {
 
 //     this.setState({ fontLoaded: true });
 //   }
+  componentDidMount () {
+    const governmentQuestions = getQuestions('government', 'systems')
+    this.setState({questions: governmentQuestions})
+  }
 
   render() {
-    // const {fontLoaded} = this.state
+    const {questions} = this.state
+    const numQ = questions.length
     return (
-        <Text>GOV CARDS!</Text>
+        <View>
+        <Text>{`GOV CARDS! We have ${numQ} questions today!`}</Text>
+
+        </View>
+
     //   <View>
     //     {
     //       fontLoaded ? (

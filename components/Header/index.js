@@ -17,11 +17,12 @@ class Header extends React.Component {
 
   render() {
     const {fontLoaded} = this.state
+    console.log('in the header', this.props.title)
     return (
       <View>
         {
           fontLoaded ? (
-            <Text style={styles.header}>Citizen</Text>
+            <Text style={styles.header}>{this.props.title}</Text>
           ) : null
         }
       </View>
@@ -32,9 +33,11 @@ class Header extends React.Component {
 const styles = StyleSheet.create({
   header: {
     // marginTop: 10,
-    height: 80,
-    backgroundColor: '#fff',
+    // height: 80,
+    // flex:1,
+    
     fontSize: 40,
+    color: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     fontFamily: 'Charmonman Regular'

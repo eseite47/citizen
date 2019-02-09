@@ -1,4 +1,4 @@
-module.export = [
+const questions = [
   {
     category: 'government',
     type: 'principles',
@@ -761,3 +761,7 @@ module.export = [
     ]
   }
 ]
+
+module.exports = {
+  questions
+}

@@ -1,16 +1,17 @@
 import React from 'react';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
-import HomePage from './components/HomePage'
-import GovCards from './components/GovCards'
-import HistCards from './components/HistCards'
-import AllCards from './components/AllCards'
+import HomePage from './Views/HomePage'
+import CatergoryOptions from './Views/CategoryOptions'
+import GovCards from './Views/GovCards'
+import HistCards from './Views/HistCards'
+import AllCards from './Views/AllCards'
 
 const MainNavigator = createStackNavigator({
   Home: {screen: HomePage},
-  Gov: {screen: GovCards},
-  HistGeo: {screen: HistCards},
-  All: {screen: AllCards}
+  CatergoryOptions: {screen: CatergoryOptions},
+  // HistGeo: {screen: HistCards},
+  // All: {screen: AllCards}
 });
 
 const AppContainer = createAppContainer(MainNavigator);
