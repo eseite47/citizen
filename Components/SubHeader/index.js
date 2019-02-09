@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View } from 'react-native';
 import {Font} from 'expo'
 
-class Header extends React.Component {
+class SubHeader extends React.Component {
   state = {
     fontLoaded: false,
   };
@@ -17,7 +17,6 @@ class Header extends React.Component {
 
   render() {
     const {fontLoaded} = this.state
-    console.log('in the header', this.props.title)
     return (
       <View>
         {
@@ -36,7 +35,7 @@ const styles = StyleSheet.create({
     // height: 80,
     // flex:1,
     
-    fontSize: 40,
+    fontSize: 30,
     color: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
@@ -44,4 +43,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Header
+export default SubHeader

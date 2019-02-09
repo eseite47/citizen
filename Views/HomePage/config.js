@@ -12,7 +12,8 @@ NavOptions = [
     },
     text: 'History and Geography'
   }, {
-    onPress: 'All',
+    onPressNav: 'FlashCardView',
+    onPressProps: {},
     text: 'Everything '
   }
 ]

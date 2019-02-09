@@ -3,15 +3,12 @@ import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 import HomePage from './Views/HomePage'
 import CatergoryOptions from './Views/CategoryOptions'
-import GovCards from './Views/GovCards'
-import HistCards from './Views/HistCards'
-import AllCards from './Views/AllCards'
+import FlashCardView from './Views/FlashCardView'
 
 const MainNavigator = createStackNavigator({
   Home: {screen: HomePage},
   CatergoryOptions: {screen: CatergoryOptions},
-  // HistGeo: {screen: HistCards},
-  // All: {screen: AllCards}
+  FlashCardView : {screen: FlashCardView}
 });
 
 const AppContainer = createAppContainer(MainNavigator);

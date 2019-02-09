@@ -3,31 +3,34 @@ categoryOptions = {
     title: 'American Government',
     nav: [
       {
-        // onPressNav: 'CatergoryOptions',
-        // onPressProps: {
-        //   category: 'Gov'
-        // },
+        onPressNav: 'FlashCardView',
+        onPressProps: {
+          category: 'government',
+          type: 'principles'
+        },
         text: 'Principles of Democracy'
       },
       {
-        // onPressNav: 'CatergoryOptions',
-        // onPressProps: {
-        //   category: 'Gov'
-        // },
+        onPressNav: 'FlashCardView',
+        onPressProps: {
+          category: 'government',
+          type: 'systems'
+        },
         text: 'Systems of Government'
       },
       {
-        // onPressNav: 'CatergoryOptions',
-        // onPressProps: {
-        //   category: 'Gov'
-        // },
+        onPressNav: 'FlashCardView',
+        onPressProps: {
+          category: 'government',
+          type: 'rights'
+        },
         text: 'Rights and Responsibilities'
       },
       {
-        // onPressNav: 'CatergoryOptions',
-        // onPressProps: {
-        //   category: 'Gov'
-        // },
+        onPressNav: 'FlashCardView',
+        onPressProps: {
+          category: 'government'
+        },
         text: `Let's Study Everything`
       }
     ]
@@ -36,45 +39,50 @@ categoryOptions = {
     title: 'History and Geography',
     nav: [
       {
-        // onPressNav: 'CatergoryOptions',
-        // onPressProps: {
-        //   category: 'Gov'
-        // },
+        onPressNav: 'FlashCardView',
+        onPressProps: {
+          category: 'history-geo',
+          type: 'history-colonial'
+        },
         text: 'Colonial Period and Independence'
       },
       {
-        // onPressNav: 'CatergoryOptions',
-        // onPressProps: {
-        //   category: 'Gov'
-        // },
+        onPressNav: 'FlashCardView',
+        onPressProps: {
+          category: 'history-geo',
+          type: 'history-1800'
+        },
         text: 'The 1800s'
       },
       {
-        // onPressNav: 'CatergoryOptions',
-        // onPressProps: {
-        //   category: 'Gov'
-        // },
+        onPressNav: 'FlashCardView',
+        onPressProps: {
+          category: 'history-geo',
+          type: 'history-modern'
+        },
         text: 'Recent History'
       },
       {
-        // onPressNav: 'CatergoryOptions',
-        // onPressProps: {
-        //   category: 'Gov'
-        // },
+        onPressNav: 'FlashCardView',
+        onPressProps: {
+          category: 'history-geo',
+          type: 'geography'
+        },
         text: 'Geography'
       },
       {
-        // onPressNav: 'CatergoryOptions',
-        // onPressProps: {
-        //   category: 'Gov'
-        // },
+        onPressNav: 'FlashCardView',
+        onPressProps: {
+          category: 'history-geo',
+          type: 'symbols'
+        },
         text: 'Symbols'
       },
       {
-        // onPressNav: 'CatergoryOptions',
-        // onPressProps: {
-        //   category: 'Gov'
-        // },
+        onPressNav: 'FlashCardView',
+        onPressProps: {
+          category: 'history-geo'
+        },
         text: `Let's Study Everything`
       }
     ]

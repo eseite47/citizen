@@ -1,11 +1,12 @@
 import React from 'react';
 import {StyleSheet, Text, View } from 'react-native';
 import {Font} from 'expo'
+import { getQuestions } from '../../utils/getQuestions'
 
-class HistCards extends React.Component {
-//   state = {
-//     fontLoaded: false,
-//   };
+class FlashCardView extends React.Component {
+  state = {
+    questions: []
+  };
 
 //   async componentDidMount() {
 //     await Font.loadAsync({
@@ -14,11 +15,22 @@ class HistCards extends React.Component {
 
 //     this.setState({ fontLoaded: true });
 //   }
+  componentDidMount () {
+    const {category, type} = this.props.navigation.state.params
+    // console.log({category, type})
+    const flashCardQuestions = getQuestions(category, type)
+    this.setState({questions: flashCardQuestions})
+  }
 
   render() {
-    // const {fontLoaded} = this.state
+    const {questions} = this.state
+    const numQ = questions.length
     return (
-        <Text>HISTORY AND GEOGRAPHY CARDS!</Text>
+        <View>
+        <Text>{`FLASH CARDS! We have ${numQ} questions today!`}</Text>
+
+        </View>
+
     //   <View>
     //     {
     //       fontLoaded ? (
@@ -42,4 +54,4 @@ class HistCards extends React.Component {
 //   },
 // });
 
-export default HistCards
+export default FlashCardView

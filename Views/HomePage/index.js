@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import {StyleSheet, Text, View, Image, Button, TouchableNativeFeedback } from 'react-native';
 import {Font} from 'expo'
 
-import Header from '../../Components/Header'
+import Header from '../../Components/HomeHeader'
 import NavButton from '../../Components/NavButton'
 import {NavOptions} from './config'
 
