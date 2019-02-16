@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {StyleSheet, TouchableNativeFeedback, View, Button } from 'react-native';
+import {StyleSheet, Text, TouchableNativeFeedback, View, Button } from 'react-native';
 import {Font} from 'expo'
 import SubHeader from '../../Components/SubHeader'
 import Card from '../../Components/FlashCard'
@@ -45,44 +45,36 @@ class FlashCardView extends React.Component {
     const currentQ = questions[currentIndex]
     if (!currentQ) return null
     return (
-
-        <Fragment>
-          <View style={styles.header}>
-            <SubHeader 
-              title={`${currentIndex} / ${numQ}`}
+      <Fragment>
+        <View style={styles.header}>
+          <SubHeader 
+            title={`${currentIndex +  1} / ${numQ}`}
+          />
+        </View>
+        <TouchableNativeFeedback onPress={this.flipCard}>
+          <View style={styles.card}>
+            <Card 
+              currentQ={currentQ}
+              showAnswer={showAnswer}
             />
           </View>
-          <TouchableNativeFeedback onPress={this.flipCard}>
-            <View style={styles.card}>
-              <Card 
-                currentQ={currentQ}
-                showAnswer={showAnswer}
-              />
+        </TouchableNativeFeedback>
+        <View style={styles.buttons}>
+          {currentIndex > 0 ? (
+            <TouchableNativeFeedback onPress={this.prevQuestion}>
+              <View style={styles.backButton}>
+                <Text style={styles.buttonText}>{'<'}</Text>
+              </View>
+            </TouchableNativeFeedback>
+            ) : null
+          }
+          <TouchableNativeFeedback onPress={this.nextQuestion}>
+            <View style={styles.forwardButton}>
+              <Text style={styles.buttonText}>Next ></Text>
             </View>
           </TouchableNativeFeedback>
-          <View style={styles.buttons}>
-            {currentIndex > 0 ? <Button
-              onPress={this.prevQuestion}
-              title="<"
-              color="#e7e7e7"
-              accessibilityLabel="Previous"
-            /> : null}
-            <Button
-              onPress={this.nextQuestion}
-              title="Next >"
-              color="#4CAF50"
-              accessibilityLabel="Next"
-            />
-          </View>
-        </Fragment>
-
-    //   <View>
-    //     {
-    //       fontLoaded ? (
-    //         <Text style={styles.header}>Citizen</Text>
-    //       ) : null
-    //     }
-    //   </View>
+        </View>
+      </Fragment>
     )
   }
 }
@@ -98,7 +90,35 @@ const styles = StyleSheet.create({
     flex: 4,
   },
   buttons: {
-    flex: 1
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  backButton: {
+    margin: 15,
+    width: '30%',
+    height: 75,
+    color: "#e7e7e7",
+    borderColor: '#2196F3',
+    borderRadius: 4,
+    borderWidth: 0.5,
+    fontSize: 25,
+    alignItems: 'center',
+  },
+  forwardButton: {
+    margin: 15,
+    width: '50%',
+    height: 75,
+    color: 'green',
+    borderColor: '#2196F3',
+    borderRadius: 4,
+    borderWidth: 0.5,
+    fontSize: 25,
+    alignItems: 'center',
+  },
+  buttonText: {
+    fontSize: 25
   }
 });
 
