@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {StyleSheet, Text, View, Button } from 'react-native';
+import {StyleSheet, TouchableNativeFeedback, View, Button } from 'react-native';
 import {Font} from 'expo'
 import SubHeader from '../../Components/SubHeader'
 import Card from '../../Components/FlashCard'
@@ -26,7 +26,6 @@ class FlashCardView extends React.Component {
   }
 
   flipCard = () => {
-    console.log('flipping card')
 		this.setState({showAnswer: !this.state.showAnswer})
 	}
 
@@ -53,14 +52,14 @@ class FlashCardView extends React.Component {
               title={`${currentIndex} / ${numQ}`}
             />
           </View>
-          <View style={styles.card}>
-            <Card 
-              currentQ={currentQ}
-              flipCard={this.flipCard}
-              showAnswer={showAnswer}
-            />
-            {/* <Text>{currentQ.question}</Text> */}
-          </View>
+          <TouchableNativeFeedback onPress={this.flipCard}>
+            <View style={styles.card}>
+              <Card 
+                currentQ={currentQ}
+                showAnswer={showAnswer}
+              />
+            </View>
+          </TouchableNativeFeedback>
           <View style={styles.buttons}>
             {currentIndex > 0 ? <Button
               onPress={this.prevQuestion}
@@ -96,7 +95,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   card: {
-    flex: 4
+    flex: 4,
   },
   buttons: {
     flex: 1

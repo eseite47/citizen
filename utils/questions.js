@@ -737,7 +737,7 @@ const questions = [
     category: 'history-geo' ,
     type: 'symbols',
     question: 'What is the name of the national anthem?',
-    answer: 'The Star-Spangled Banner'
+    answer: ['The Star-Spangled Banner']
   }, {
     category: 'history-geo' ,
     type: 'symbols',

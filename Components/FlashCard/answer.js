@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, FlatList } from 'react-native';
+import {StyleSheet, Text, View, ScrollView } from 'react-native';
 import {Font} from 'expo'
 
 class Answer extends React.Component {
@@ -17,24 +17,24 @@ class Answer extends React.Component {
 
   render() {
 		const {answer} = this.props
-		console.log(answer)
     return (
-			<View >
+			<ScrollView >
 				<View style={styles.titleView}>
 					<Text style={styles.title}>
 						Answer
 					</Text>
 				</View>
+				
 				<View style={styles.textView}>
 					<Text style={styles.text}>
 						{
 							answer.map((a, idx) => {
-								return (<Text key={idx}>- {a}</Text>)
+								return (<Text key={idx}>- {a}{"\n"}</Text>)
 							})
 						}
 					</Text>
 				</View>
-			</View>
+			</ScrollView>
     )
   }
 }
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
 	},
   text: {
-    lineHeight: 40,
+    lineHeight: 30,
     fontFamily: 'Poiret One',
 		fontSize: 25
   },

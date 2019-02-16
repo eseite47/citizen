@@ -24,21 +24,19 @@ class Card extends React.Component {
       <View>
         {
           fontLoaded ? (
-            <TouchableNativeFeedback  onPress={this.props.flipCard}>
-							<View style={styles.card}>
-							{
-								showAnswer ? (
-									<Answer
-										answer={answer}
-									/>
-								) : (
-									<Question 
-										question={question}
-									/>
-								)
-							}
-							</View>
-						</TouchableNativeFeedback>) : null
+						<View style={styles.card}>
+						{
+							showAnswer ? (
+								<Answer
+									answer={answer}
+								/>
+							) : (
+								<Question 
+									question={question}
+								/>
+							)
+						}
+						</View>) : null
         }
       </View>
     )
@@ -54,13 +52,13 @@ const styles = StyleSheet.create({
     fontFamily: 'Poiret One',
 	},
 	card: {
-		margin: 25,
+		margin: 10,
 		padding: 10,
-    width: 300,
-    height: 250,
-    borderColor: '#2196F3',
-    borderRadius: 4,
-		borderWidth: 0.5,
+    // width: 300,
+    // height: 250,
+    // borderColor: '#2196F3',
+    // borderRadius: 4,
+		// borderWidth: 0.5,
 	},
 	// text: {
   //   lineHeight: 40,
