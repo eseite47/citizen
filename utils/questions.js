@@ -116,7 +116,7 @@ const questions = [
     question: 'Who makes federal laws?',
     answer: [
       'The Congress', 
-      'ThenSenate and the House (of Representatives)', 
+      'The Senate and the House (of Representatives)', 
       'The U.S. (national) legislature'
     ]
   }, {
