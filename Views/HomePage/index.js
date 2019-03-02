@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {StyleSheet, Text, View, Image, Button, TouchableNativeFeedback } from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {Font} from 'expo'
 
 import Header from '../../Components/HomeHeader'
@@ -13,7 +13,9 @@ class HomePage extends React.Component {
 
   async componentDidMount() {
     await Font.loadAsync({
-      'Poiret One': require('../../assets/fonts/PoiretOne-Regular.ttf')
+      'Poiret One': require('../../assets/fonts/PoiretOne-Regular.ttf'),
+      'Dosis': require('../../assets/fonts/Dosis-Regular.ttf'),
+      'Charmonman Regular': require('../../assets/fonts/Charmonman-Regular.ttf')
     });
 
     this.setState({ fontLoaded: true });

@@ -1,28 +1,19 @@
 import React, {Fragment} from 'react';
-import {StyleSheet, Text, TouchableNativeFeedback, View, Button } from 'react-native';
-import {Font} from 'expo'
+import {StyleSheet, Text, TouchableNativeFeedback, View} from 'react-native';
 import SubHeader from '../../Components/SubHeader'
 import Card from '../../Components/FlashCard'
-import { getQuestions } from '../../utils/getQuestions'
+import {getQuestions} from '../../utils/getQuestions'
 
 class FlashCardView extends React.Component {
   state = {
     currentIndex: 0,
     showAnswer: false,
-    questions: []
-  };
-
-//   async componentDidMount() {
-//     await Font.loadAsync({
-//       'Charmonman Regular': require('../../assets/fonts/Charmonman-Regular.ttf')
-//     });
-
-//     this.setState({ fontLoaded: true });
-//   }
-  componentDidMount () {
+    questions: [],
+  }
+  async componentDidMount() {
     const {category, type} = this.props.navigation.state.params
     const flashCardQuestions = getQuestions(category, type)
-    this.setState({questions: flashCardQuestions})
+    this.setState({ questions: flashCardQuestions });
   }
 
   flipCard = () => {
@@ -63,19 +54,23 @@ class FlashCardView extends React.Component {
           </View>
         </TouchableNativeFeedback>
         <View style={styles.buttons}>
-          {currentIndex > 0 ? (
-            <TouchableNativeFeedback onPress={this.prevQuestion}>
-              <View style={styles.backButton}>
-                <Text style={styles.buttonText}>{'<'}</Text>
+          <Fragment>
+            <Fragment>
+              { currentIndex > 0 ? (
+                <TouchableNativeFeedback onPress={this.prevQuestion}>
+                  <View style={styles.backButton}>
+                    <Text style={styles.buttonText}>{'<'}</Text>
+                  </View>
+                </TouchableNativeFeedback>
+                ) : null
+              }
+            </Fragment>
+            <TouchableNativeFeedback onPress={this.nextQuestion}>
+              <View style={styles.forwardButton}>
+                <Text style={styles.buttonText}>Next ></Text>
               </View>
             </TouchableNativeFeedback>
-            ) : null
-          }
-          <TouchableNativeFeedback onPress={this.nextQuestion}>
-            <View style={styles.forwardButton}>
-              <Text style={styles.buttonText}>Next ></Text>
-            </View>
-          </TouchableNativeFeedback>
+          </Fragment>
         </View>
       </Fragment>
     )
@@ -106,8 +101,8 @@ const styles = StyleSheet.create({
     borderColor: '#2196F3',
     borderRadius: 4,
     borderWidth: 0.5,
-    fontSize: 25,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   forwardButton: {
     margin: 15,
@@ -117,11 +112,12 @@ const styles = StyleSheet.create({
     borderColor: '#2196F3',
     borderRadius: 4,
     borderWidth: 0.5,
-    fontSize: 25,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   buttonText: {
-    fontSize: 25
+    fontSize: 30,
+    fontFamily: 'Dosis',
   }
 });
 

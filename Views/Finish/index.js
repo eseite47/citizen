@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {StyleSheet, Text, View, Image, Button, TouchableNativeFeedback } from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {Font} from 'expo'
 
 import Header from '../../Components/HomeHeader'
@@ -7,17 +7,8 @@ import NavButton from '../../Components/NavButton'
 import {NavOptions} from './config'
 
 class HomePage extends React.Component {
-  state = {
-    fontLoaded: false,
-  };
+  state = {};
 
-  async componentDidMount() {
-    await Font.loadAsync({
-      'Poiret One': require('../../assets/fonts/PoiretOne-Regular.ttf')
-    });
-
-    this.setState({ fontLoaded: true });
-  }
   render() {
     const {fontLoaded} = this.state
     return (
@@ -26,26 +17,19 @@ class HomePage extends React.Component {
           <Header
             title={'Nicely Done!'}
           />
-          {/* <Text>Nicely Done!</Text> */}
         </View>
-        {
-          fontLoaded ? ( 
-            <View style={styles.NavOptions}>
-            {/* <Text style={styles.textHeader}>What are we studying today?</Text> */}
-
-            {
-              NavOptions.map((option, i) => {
-                return (
-                  <NavButton key={i}
-                    option={option}
-                    onClick={() => this.props.navigation.navigate(option.onPressNav, option.onPressProps)}
-                  />
-                )
-              })
-            }
-            </View>
-          ) : null
-        }
+					<View style={styles.NavOptions}>
+					{
+						NavOptions.map((option, i) => {
+							return (
+								<NavButton key={i}
+									option={option}
+									onClick={() => this.props.navigation.navigate(option.onPressNav, option.onPressProps)}
+								/>
+							)
+						})
+					}
+				</View>
       </Fragment>
     );
   }

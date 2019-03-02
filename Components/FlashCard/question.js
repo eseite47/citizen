@@ -1,19 +1,8 @@
 import React from 'react';
 import {StyleSheet, Text, View } from 'react-native';
-import {Font} from 'expo'
 
 class Question extends React.Component {
-  state = {
-    fontLoaded: false,
-  };
-
-  async componentDidMount() {
-    await Font.loadAsync({
-      'Poiret One': require('../../assets/fonts/PoiretOne-Regular.ttf')
-    });
-
-    this.setState({ fontLoaded: true });
-  }
+  state = {};
 
   render() {
     const {question} = this.props
@@ -37,6 +26,7 @@ class Question extends React.Component {
 const styles = StyleSheet.create({
 	titleView: {
 		alignItems: 'center',
+		paddingBottom: 20
 	},
 	title: {
     lineHeight: 60,
@@ -49,7 +39,7 @@ const styles = StyleSheet.create({
 	},
   text: {
     lineHeight: 40,
-    fontFamily: 'Poiret One',
+    fontFamily: 'Dosis',
 		fontSize: 25
   },
 });

@@ -31,10 +31,6 @@ class Header extends React.Component {
 
 const styles = StyleSheet.create({
   header: {
-    // marginTop: 10,
-    // height: 80,
-    // flex:1,
-    
     fontSize: 40,
     color: '#fff',
     alignItems: 'center',
