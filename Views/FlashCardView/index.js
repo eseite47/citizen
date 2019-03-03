@@ -27,7 +27,7 @@ class FlashCardView extends React.Component {
 
   nextQuestion = () => {
     const currentIndex = this.state.currentIndex +1
-    if (currentIndex >= this.state.questions.length -1) {
+    if (currentIndex >= this.state.questions.length) {
       this.props.navigation.navigate('Finish')
     }
     this.setState({currentIndex, showAnswer: false})
