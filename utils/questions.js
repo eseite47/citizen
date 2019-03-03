@@ -304,12 +304,12 @@ const questions = [
     category: 'government',
     type: 'systems',
     question: 'What is the political party of the President now?',
-    answer: 'Republican'
+    answer: ['Republican']
   }, {
     category: 'government',
     type: 'systems',
     question: 'What is the name of the Speaker of the House of Representatives now?',
-    answer: 'Democrats'
+    answer: ['Nancy Pelosy']
   }, {
     category: 'government',
     type: 'rights',
