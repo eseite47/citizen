@@ -1,6 +1,12 @@
 # Citizen
 
-Study for the American citizenship test
+#### Study for the American citizenship test
+
+Citizen is a clean, light weight mobile app, to help study for [USCIS](https://www.uscis.gov/)'s civic test. The civic test is part of the naturalization interview every applicant has to take.
+
+Want to read more about the naturzalization process? Check out the [what to expect](https://my.uscis.gov/citizenship/what_to_expect).
+
+On the day of your test, the USCIS officer will ask you 10 out of [100 possible questions](https://www.uscis.gov/citizenship/learners/study-test/study-materials-civics-test). Make sure you are ready, by practicing with the [Citizen app](https://expo.io/@eseite47/citizen).
 
 ## Installation
 
