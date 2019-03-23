@@ -3,7 +3,8 @@ const questions = [
     category: 'government',
     type: 'principles',
     question: 'What is the supreme law of the land?',
-    answer: ['The Constitution']
+    answer: ['The Constitution'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'principles',
@@ -12,12 +13,14 @@ const questions = [
       'Sets up the government',
       'Defines the government',
       'Protects basic rights of Americans'
-    ]
+    ],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'government',
     type: 'principles',
     question: 'The idea of self-government is in the first three words of the Constitution. What are these words?',
-    answer: ['We the People']
+    answer: ['We the People'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'principles',
@@ -25,12 +28,14 @@ const questions = [
     answer: [
       'A change (to the Constitution)',
       'An addition (to the Constitution)'
-    ]
+    ],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'government',
     type: 'principles',
     question: 'What do we call the first ten amendments to the Constitution?',
-    answer: ['The Bill of Rights']
+    answer: ['The Bill of Rights'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'principles',
@@ -41,12 +46,15 @@ const questions = [
       'Assembly',
       'Press',
       'Petition the government'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   },{
     category: 'government',
     type: 'principles',
     question: 'How many amendments does the Constitution have?',
-    answer: ['Twenty-seven (27)']
+    answer: ['Twenty-seven (27)'],
+    answerType: 'singleAnswer'
   },{
     category: 'government',
     type: 'principles',
@@ -55,7 +63,8 @@ const questions = [
       'Announced our independence (from Great Britain)',
       'Declared our independence (from Great Britain)',
       'Said that the United States is free (from Great Britain)'
-    ]
+    ],
+    answerType: 'interchangeAnswer'
   },{
     category: 'government',
     type: 'principles',
@@ -64,17 +73,21 @@ const questions = [
       'Life',
       'Liberty',
       'Pursuit of happiness'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 2
   },{
     category: 'government',
     type: 'principles',
     question: 'What is freedom of religion?',
-    answer: ['You can practice any religion, or not practice a religion.']
+    answer: ['You can practice any religion, or not practice a religion.'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'principles',
     question: 'What is the economic system in the United States?',
-    answer: ['Capitalist economy', 'Market economy']
+    answer: ['Capitalist economy', 'Market economy'],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'government',
     type: 'principles',
@@ -84,7 +97,8 @@ const questions = [
       'Leaders must obey the law',
       'Government must obey the law',
       'No one is above the law'
-    ]
+    ],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'government',
     type: 'systems',
@@ -96,7 +110,9 @@ const questions = [
       'Executive',
       'The courts',
       'Judicial'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'government',
     type: 'systems',
@@ -104,12 +120,14 @@ const questions = [
     answer: [
       'Checks and balances',
       'Separation of powers'
-    ]
+    ],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'Who is in charge of the executive branch?',
-    answer: ['The President']
+    answer: ['The President'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
@@ -118,47 +136,58 @@ const questions = [
       'The Congress', 
       'The Senate and the House (of Representatives)', 
       'The U.S. (national) legislature'
-    ]
+    ],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'What are the two parts of the U.S. Congress?',
-    answer: ['The Senate and House (of Representatives)']
+    answer: ['The Senate and House (of Representatives)'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'How many U.S. Senators are there?',
-    answer: ['One hundred (100)']
+    answer: ['One hundred (100)'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'We elect a U.S. Senator for how many years?',
-    answer: ['six (6)']
+    answer: ['six (6)'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'Who is one of your state’s U.S. Senators now?',
-    answer: ['Answers will vary']
+    answer: ['Answers will vary'],
+    answerType: 'peopleAnswer',
+    answerKey: 'senator'
   }, {
     category: 'government',
     type: 'systems',
     question: 'The House of Representatives has how many voting members?',
-    answer: ['Four hundred thirty-five (435)']
+    answer: ['Four hundred thirty-five (435)'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'We elect a U.S. Representative for how many years?',
-    answer: ['Two (2)']
+    answer: ['Two (2)'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'Name your U.S. Representative',
-    answer: ['Answers will vary']
+    answer: ['Answers will vary'],
+    answerType: 'peopleAnswer',
+    answerKey: 'representative'
   }, {
     category: 'government',
     type: 'systems',
     question: 'Who does a U.S. Senator represent?',
-    answer: ['All people of the state']
+    answer: ['All people of the state'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
@@ -167,57 +196,70 @@ const questions = [
       'Because of the state’s population', 
       'Because they have more people',
       'Because some states have more people'
-    ]
+    ],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'We elect a President for how many years?',
-    answer: ['Four (4)']
+    answer: ['Four (4)'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'In what month do we vote for President?',
-    answer: ['November']
+    answer: ['November'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'What is the name of the President of the United States now?',
-    answer: ['Donald J. Trump']
+    answer: ['Donald J. Trump'],
+    answerType: 'peopleAnswer',
+    answerKey: 'president'
   }, {
     category: 'government',
     type: 'systems',
     question: 'What is the name of the Vice President of the United States now?',
-    answer: ['Mike Pence']
+    answer: ['Mike Pence'],
+    answerType: 'peopleAnswer',
+    answerKey: 'vicePresident'
   }, {
     category: 'government',
     type: 'systems',
     question: 'If the President can no longer serve, who becomes President?',
-    answer: ['The Vice President']
+    answer: ['The Vice President'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'If both the President and the Vice President can no longer serve, who becomes President?',
-    answer: ['The Speaker of the House']
+    answer: ['The Speaker of the House'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'Who is the Commander in Chief of the military?',
-    answer: ['The President']
+    answer: ['The President'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'Who signs bills to become laws?',
-    answer: ['The President']
+    answer: ['The President'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'Who vetoes bills?',
-    answer: ['The President']
+    answer: ['The President'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'What does the President’s Cabinet do?',
-    answer: ['Advises the President']
+    answer: ['Advises the President'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
@@ -239,7 +281,9 @@ const questions = [
       'Secretary of Veterans Affairs',
       'Attorney General',
       'Vice President'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 2
   }, {
     category: 'government',
     type: 'systems',
@@ -248,22 +292,28 @@ const questions = [
       'Reviews laws',
       'Explains laws',
       'Resolves disputes (disagreements)',
-      'Decides if a law goes against the Constitution']
+      'Decides if a law goes against the Constitution'
+    ],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'What is the highest court in the United States?',
-    answer: ['The Supreme Court']
+    answer: ['The Supreme Court'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'How many justices are on the Supreme Court?',
-    answer: ['Nine (9)']
+    answer: ['Nine (9)'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'Who is the Chief Justice of the United States now?',
-    answer: ['John Roberts']
+    answer: ['John Roberts'],
+    answerType: 'peopleAnswer',
+    answerKey: 'chiefJustice'
   }, {
     category: 'government',
     type: 'systems',
@@ -273,7 +323,9 @@ const questions = [
       'To declare war',
       'To create an army',
       'To make treaties'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'government',
     type: 'systems',
@@ -284,32 +336,41 @@ const questions = [
       'Provide safety (fire departments)',
       'Give a driver’s license',
       'Approve zoning and land use'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'government',
     type: 'systems',
     question: 'Who is the Governor of your state now?',
-    answer: ['Answsers will vary']
+    answer: ['Answsers will vary'],
+    answerType: 'peopleAnswer',
+    answerKey: 'governor'
   }, {
     category: 'government',
     type: 'systems',
     question: 'What is the capital of your state?',
-    answer: ['Answers will vary']
+    answer: ['Answers will vary'],
+    answerType: 'stateAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'What are the two major political parties in the United States?',
-    answer: ['Democratic and Republican']
+    answer: ['Democratic and Republican'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'What is the political party of the President now?',
-    answer: ['Republican']
+    answer: ['Republican'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'systems',
     question: 'What is the name of the Speaker of the House of Representatives now?',
-    answer: ['Nancy Pelosy']
+    answer: ['Nancy Pelosy'],
+    answerType: 'peopleAnswer',
+    answerKey: 'speaker'
   }, {
     category: 'government',
     type: 'rights',
@@ -319,7 +380,9 @@ const questions = [
       `You don’t have to pay (a poll tax) to vote`,
       `Any citizen can vote. (Women and men can vote)`,
       `A male citizen of any race (can vote).`,
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'government',
     type: 'rights',
@@ -327,7 +390,9 @@ const questions = [
     answer: [
       'Serve on a jury',
       'Vote in a federal election'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'government',
     type: 'rights',
@@ -335,7 +400,9 @@ const questions = [
     answer: [
       'Vote in a federal election',
       'Run for federal office'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'government',
     type: 'rights',
@@ -347,7 +414,9 @@ const questions = [
       'freedom to petition the government',
       'freedom of religion',
       'the right to bear arms'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 2
   }, {
     category: 'government',
     type: 'rights',
@@ -355,7 +424,9 @@ const questions = [
     answer: [
       'The United States',
       'The flag'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'government',
     type: 'rights',
@@ -367,12 +438,15 @@ const questions = [
       'Serve in the U.S. military (if needed)',
       'Serve (do important work for) the nation (if needed)',
       'Be loyal to the United States'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'government',
     type: 'rights',
     question: 'How old do citizens have to be to vote for President?',
-    answer: ['Eighteen (18) and older']
+    answer: ['Eighteen (18) and older'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'rights',
@@ -388,12 +462,15 @@ const questions = [
       'Publicly support or oppose an issue or policy',
       'Run for office',
       'Write to a newspaper'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 2
   }, {
     category: 'government',
     type: 'rights',
     question: 'When is the last day you can send in federal income tax forms?',
-    answer: ['April 15']
+    answer: ['April 15'],
+    answerType: 'singleAnswer'
   }, {
     category: 'government',
     type: 'rights',
@@ -401,7 +478,8 @@ const questions = [
     answer: [
       'At age eighteen (18)',
       'Between eighteen (18) and twenty-six (26)'
-    ]
+    ],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-colonial',
@@ -413,12 +491,15 @@ const questions = [
       'Economic opportunity',
       'Practice their religion',
       'Escape persecution'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'history-geo' ,
     type: 'history-colonial',
     question: 'Who lived in America before the Europeans arrived?',
-    answer: ['Native Americans']
+    answer: ['Native Americans'],
+    answerType: 'singleAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-colonial',
@@ -426,7 +507,8 @@ const questions = [
     answer: [
       'Africans',
       'People from Africa'
-    ]
+    ],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-colonial',
@@ -435,17 +517,21 @@ const questions = [
       `Because of high taxes (taxation without representation)`,
       `Because the British army stayed in their houses (boarding, quartering)`,
       `Because they didn’t have self-government`
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'history-geo' ,
     type: 'history-colonial',
     question: 'Who wrote the Declaration of Independence?',
-    answer: ['Thomas Jefferson']
+    answer: ['Thomas Jefferson'],
+    answerType: 'singleAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-colonial',
     question: 'When was the Declaration of Independence adopted?',
-    answer: ['July 4, 1776']
+    answer: ['July 4, 1776'],
+    answerType: 'singleAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-colonial',
@@ -464,7 +550,9 @@ const questions = [
       'North Carolina',
       'South Carolina',
       'Georgia'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 3
   }, {
     category: 'history-geo' ,
     type: 'history-colonial',
@@ -472,12 +560,14 @@ const questions = [
     answer: [
       'The Constitution was written',
       'The Founding Fathers wrote the Constitution'
-    ]
+    ],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-colonial',
     question: 'When was the Constitution written?',
-    answer: ['1787']
+    answer: ['1787'],
+    answerType: 'singleAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-colonial',
@@ -487,7 +577,9 @@ const questions = [
       'Alexander Hamilton',
       'John Jay',
       'Publius'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'history-geo' ,
     type: 'history-colonial',
@@ -498,17 +590,23 @@ const questions = [
       'First Postmaster General of the United States',
       `Writer of “Poor Richard’s Almanac”`,
       'Started the first free libraries'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'history-geo' ,
     type: 'history-colonial',
     question: `Who is the “Father of Our Country”?`,
-    answer: ['George Washington']
+    answer: ['George Washington'],
+    answerType: 'peopleAnswer',
+    answerKey: 'washington'
   }, {
     category: 'history-geo' ,
     type: 'history-colonial',
     question: `Who was the first President?`,
-    answer: ['George Washington']
+    answer: ['George Washington'],
+    answerType: 'peopleAnswer',
+    answerKey: 'washington'
   }, {
     category: 'history-geo' ,
     type: 'history-1800',
@@ -516,7 +614,8 @@ const questions = [
     answer: [
       'The Louisiana Territory',
       'Louisiana'
-    ]
+    ],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-1800',
@@ -526,12 +625,15 @@ const questions = [
       'Mexican-American War',
       'Civil War',
       'Spanish-American War'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'history-geo' ,
     type: 'history-1800',
     question: 'Name the U.S. war between the North and the South. ',
-    answer: ['The Civil War']
+    answer: ['The Civil War'],
+    answerType: 'singleAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-1800',
@@ -540,7 +642,9 @@ const questions = [
       'slavery',
       'economic reasons',
       `states’ rights`
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'history-geo' ,
     type: 'history-1800',
@@ -549,12 +653,15 @@ const questions = [
       'Freed the slaves (Emancipation Proclamation)',
       'Saved (or preserved) the Union',
       'Led the United States during the Civil War'
-    ]
+    ],
+    answerType: 'multitleAnswer',
+    answerQuantity: 1
   }, {
     category: 'history-geo' ,
     type: 'history-1800',
     question: 'What did the Emancipation Proclamation do?',
-    answer: ['Freed slaves in the Confederate states']
+    answer: ['Freed slaves in the Confederate states'],
+    answerType: 'singleAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-1800',
@@ -562,7 +669,8 @@ const questions = [
     answer: [
       `fought for women’s rights`,
       'fought for civil rights'
-    ]
+    ],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-modern',
@@ -573,37 +681,47 @@ const questions = [
       'Korean War',
       'Vietnam War',
       '(Persian) Gulf War'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'history-geo' ,
     type: 'history-modern',
     question: 'Who was President during World War I?',
-    answer: ['Woodrow Wilson']
+    answer: ['Woodrow Wilson'],
+    answerType: 'peopleAnswer',
+    answerKey: 'wilson'
   }, {
     category: 'history-geo' ,
     type: 'history-modern',
     question: 'Who was President during the Great Depression and World War II?',
-    answer: ['Franklin Roosevelt']
+    answer: ['Franklin Roosevelt'],
+    answerType: 'peopleAnswer',
+    answerKey: 'roosevelt'
   }, {
     category: 'history-geo' ,
     type: 'history-modern',
     question: 'Who did the United States fight in World War II?',
-    answer: ['Japan, Germany, and Italy']
+    answer: ['Japan, Germany, and Italy'],
+    answerType: 'singleAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-modern',
     question: 'Before he was President, Eisenhower was a general. What war was he in?',
-    answer: ['World War II']
+    answer: ['World War II'],
+    answerType: 'singleAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-modern',
     question: 'During the Cold War, what was the main concern of the United States?',
-    answer: ['Communism']
+    answer: ['Communism'],
+    answerType: 'singleAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-modern',
     question: 'What movement tried to end racial discrimination?',
-    answer: ['Civil rights (movement)']
+    answer: ['Civil rights (movement)'],
+    answerType: 'singleAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-modern',
@@ -611,12 +729,14 @@ const questions = [
     answer: [
       'Fought for civil rights',
       'Worked for equality for all Americans'
-    ]
+    ],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-modern',
     question: 'What major event happened on September 11, 2001, in the United States?',
-    answer: ['Terrorists attacked the United States.']
+    answer: ['Terrorists attacked the United States.'],
+    answerType: 'singleAnswer'
   }, {
     category: 'history-geo' ,
     type: 'history-modern',
@@ -644,7 +764,9 @@ const questions = [
       'Teton',
       'Hopi',
       'Inuit'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'history-geo' ,
     type: 'geography',
@@ -652,17 +774,21 @@ const questions = [
     answer: [
       'Missouri River',
       'Mississippi River'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'history-geo' ,
     type: 'geography',
     question: 'What ocean is on the West Coast of the United States?',
-    answer: ['Pacific Ocean']
+    answer: ['Pacific Ocean'],
+    answerType: 'singleAnswer'
   }, {
     category: 'history-geo' ,
     type: 'geography',
     question: 'What ocean is on the East Coast of the United States?',
-    answer: ['Atlantic Ocean']
+    answer: ['Atlantic Ocean'],
+    answerType: 'singleAnswer'
   }, {
     category: 'history-geo' ,
     type: 'geography',
@@ -673,7 +799,9 @@ const questions = [
       'American Samoa',
       'Northern Mariana Islands',
       'Guam'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'history-geo' ,
     type: 'geography',
@@ -692,7 +820,9 @@ const questions = [
       'Idaho',
       'Washington',
       'Alaska'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'history-geo' ,
     type: 'geography',
@@ -702,12 +832,15 @@ const questions = [
       'Arizona',
       'New Mexico',
       'Texas'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 1
   }, {
     category: 'history-geo' ,
     type: 'geography',
     question: 'What is the capital of the United States?',
-    answer: ['Washington, D.C.']
+    answer: ['Washington, D.C.'],
+    answerType: 'singleAnswer'
   }, {
     category: 'history-geo' ,
     type: 'geography',
@@ -715,7 +848,8 @@ const questions = [
     answer: [
       'New York (Harbor)',
       'Liberty Island'
-    ]
+    ],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'history-geo' ,
     type: 'symbols',
@@ -723,7 +857,8 @@ const questions = [
     answer: [
       'because there were 13 original colonies',
       'because the stripes represent the original colonies'
-    ]
+    ],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'history-geo' ,
     type: 'symbols',
@@ -732,17 +867,20 @@ const questions = [
       'because there is one star for each state',
       'because each star represents a state',
       'because there are 50 states'
-    ]
+    ],
+    answerType: 'interchangeAnswer'
   }, {
     category: 'history-geo' ,
     type: 'symbols',
     question: 'What is the name of the national anthem?',
-    answer: ['The Star-Spangled Banner']
+    answer: ['The Star-Spangled Banner'],
+    answerType: 'singleAnswer'
   }, {
     category: 'history-geo' ,
     type: 'symbols',
     question: 'When do we celebrate Independence Day?',
-    answer: ['July 4']
+    answer: ['July 4'],
+    answerType: 'singleAnswer'
   }, {
     category: 'history-geo' ,
     type: 'symbols',
@@ -758,7 +896,9 @@ const questions = [
       'Veterans Day',
       'Thanksgiving',
       'Christmas'
-    ]
+    ],
+    answerType: 'multipleAnswer',
+    answerQuantity: 2
   }
 ]
 
