@@ -161,7 +161,7 @@ const questions = [
     type: 'systems',
     question: 'Who is one of your state’s U.S. Senators now?',
     answer: ['Answers will vary'],
-    answerType: 'peopleAnswer',
+    answerType: 'stateAnswer',
     answerKey: 'senator'
   }, {
     category: 'government',
@@ -180,7 +180,7 @@ const questions = [
     type: 'systems',
     question: 'Name your U.S. Representative',
     answer: ['Answers will vary'],
-    answerType: 'peopleAnswer',
+    answerType: 'stateAnswer',
     answerKey: 'representative'
   }, {
     category: 'government',
@@ -344,7 +344,7 @@ const questions = [
     type: 'systems',
     question: 'Who is the Governor of your state now?',
     answer: ['Answsers will vary'],
-    answerType: 'peopleAnswer',
+    answerType: 'stateAnswer',
     answerKey: 'governor'
   }, {
     category: 'government',
