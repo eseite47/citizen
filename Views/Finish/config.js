@@ -1,10 +1,8 @@
-NavOptions = [
+const NavOptions = [
 	{
 		onPressNav: 'Home',
 		text: 'Home'
 	}
 ]
   
-module.exports = {
-	NavOptions
-}
+export default NavOptions

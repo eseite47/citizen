@@ -1,27 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View } from 'react-native';
-
-class Question extends React.Component {
-  state = {};
-
-  render() {
-    const {question} = this.props
-    return (
-			<View >
-				<View style={styles.titleView}>
-					<Text style={styles.title}>
-						Question
-					</Text>
-				</View>
-				<View style={styles.textView}>
-					<Text style={styles.text}>
-						{question}
-					</Text>
-				</View>
-			</View>
-    )
-  }
-}
+import PropTypes from 'prop-types'
 
 const styles = StyleSheet.create({
 	titleView: {
@@ -43,5 +22,31 @@ const styles = StyleSheet.create({
 		fontSize: 25
   },
 });
+
+const Question = ({question}) =>  {
+	return (
+		<View>
+			<View style={styles.titleView}>
+				<Text style={styles.title}>
+					Question
+				
+    </Text>
+			</View>
+			<View style={styles.textView}>
+				<Text style={styles.text}>
+					{question}
+				</Text>
+			</View>
+		</View>
+	)
+}
+
+Question.defaultProps = {
+	question: ''
+}
+
+Question.propTypes = {
+	question: PropTypes.string 
+}
 
 export default Question

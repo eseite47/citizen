@@ -29,3 +29,5 @@ const people = [
     title: '32nd president of the United States '
   }
 ]
+
+export default people

@@ -1,56 +1,11 @@
 import React, {Fragment} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Font} from 'expo'
+import PropTypes from 'prop-types'
 
 import Header from '../../Components/HomeHeader'
 import NavButton from '../../Components/NavButton'
 import {NavOptions} from './config'
-
-class HomePage extends React.Component {
-  state = {
-    fontLoaded: false,
-  };
-
-  async componentDidMount() {
-    await Font.loadAsync({
-      'Poiret One': require('../../assets/fonts/PoiretOne-Regular.ttf'),
-      'Dosis': require('../../assets/fonts/Dosis-Regular.ttf'),
-      'Charmonman Regular': require('../../assets/fonts/Charmonman-Regular.ttf')
-    });
-
-    this.setState({ fontLoaded: true });
-  }
-  render() {
-    const {fontLoaded} = this.state
-    return (
-      <Fragment>
-        <View style={styles.container}>
-          <Header
-            title={'We the People'}
-          />
-        </View>
-        {
-          fontLoaded ? ( 
-            <View style={styles.NavOptions}>
-            <Text style={styles.textHeader}>What are we studying today?</Text>
-
-            {
-              NavOptions.map((option, i) => {
-                return (
-                  <NavButton key={i}
-                    option={option}
-                    onClick={() => this.props.navigation.navigate(option.onPressNav, option.onPressProps)}
-                  />
-                )
-              })
-            }
-            </View>
-          ) : null
-        }
-      </Fragment>
-    );
-  }
-}
 
 const styles = StyleSheet.create({
   container: {
@@ -76,5 +31,66 @@ const styles = StyleSheet.create({
     fontSize: 25
   },
 });
+
+class HomePage extends React.Component {
+  state = {
+    fontLoaded: false,
+  };
+
+  async componentDidMount() {
+    await Font.loadAsync({
+      'Poiret One': require('../../assets/fonts/PoiretOne-Regular.ttf'),
+      'Dosis': require('../../assets/fonts/Dosis-Regular.ttf'),
+      'Charmonman Regular': require('../../assets/fonts/Charmonman-Regular.ttf')
+    });
+
+    this.setState({ fontLoaded: true });
+  }
+
+  render() {
+    const {fontLoaded} = this.state
+    return (
+      <Fragment>
+        <View style={styles.container}>
+          <Header
+            title="We the People"
+          />
+        </View>
+        {
+          fontLoaded ? ( 
+            <View style={styles.NavOptions}>
+            <Text style={styles.textHeader}>What are we studying today?</Text>
+
+            {
+              NavOptions.map(option => {
+                const {navigation} = this.props
+                return (
+                  <NavButton
+                    key={option}
+                    option={option}
+                    onClick={() => navigation.navigate(option.onPressNav, option.onPressProps)}
+                  />
+                )
+              })
+            }
+            </View>
+          ) : null
+        }
+      </Fragment>
+    );
+  }
+}
+
+HomePage.defaultProps = {
+  navigation: {
+    navigate: () => {}
+  }
+}
+
+HomePage.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func
+  })
+}
 
 export default HomePage

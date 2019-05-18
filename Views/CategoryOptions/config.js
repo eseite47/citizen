@@ -1,4 +1,4 @@
-categoryOptions = {
+const categoryOptions = {
   Gov: {
     title: 'American Government',
     nav: [
@@ -89,6 +89,4 @@ categoryOptions = {
   }
 }
 
-module.exports = {
-  categoryOptions
-}
+export default categoryOptions

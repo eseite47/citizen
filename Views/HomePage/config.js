@@ -1,4 +1,4 @@
-NavOptions = [
+const NavOptions = [
   {
     onPressNav: 'CatergoryOptions',
     onPressProps: {

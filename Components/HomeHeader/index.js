@@ -1,6 +1,17 @@
 import React from 'react';
 import {StyleSheet, Text, View } from 'react-native';
 import {Font} from 'expo'
+import PropTypes from 'prop-types'
+
+const styles = StyleSheet.create({
+  header: {
+    fontSize: 40,
+    color: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontFamily: 'Charmonman Regular'
+  },
+});
 
 class Header extends React.Component {
   state = {
@@ -17,11 +28,12 @@ class Header extends React.Component {
 
   render() {
     const {fontLoaded} = this.state
+    const {title} = this.props
     return (
       <View>
         {
           fontLoaded ? (
-            <Text style={styles.header}>{this.props.title}</Text>
+            <Text style={styles.header}>{title}</Text>
           ) : null
         }
       </View>
@@ -29,14 +41,12 @@ class Header extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
-  header: {
-    fontSize: 40,
-    color: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontFamily: 'Charmonman Regular'
-  },
-});
+Header.defaultProps = {
+  title: ''
+}
+
+Header.propTypes = {
+  title: PropTypes.string
+}
 
 export default Header
