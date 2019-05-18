@@ -6,6 +6,7 @@
     "react/no-danger": "off",
     "no-underscore-dangle": "off",
     "react/jsx-indent": "off",
+    "global-require": "off"
   },
   "env": {
     "jest": true,
