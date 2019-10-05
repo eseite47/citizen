@@ -27,6 +27,8 @@ Note: Replace <your_username> with your GitHub username
 
 4. To start the app, run `npm run start`. Use the QR code to render the app on your phone. Make sure your computer and your phone are on the same wifi network.
 
+5. Pick an issue on our Github [Project Board](https://github.com/eseite47/citizen/projects/1_) and mark it `In progress`. If you stop working on it, make sure to move it back to `To Do`.
+
 ### Testing
 We do not currently have unit test suites, but we have plan to add testing to our workflow in the coming months. See our [Testing feature request](https://github.com/eseite47/citizen/issues/7).
 
