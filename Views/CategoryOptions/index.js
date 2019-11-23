@@ -1,14 +1,14 @@
-import React, {Fragment} from 'react';
-import {StyleSheet, View, ScrollView} from 'react-native';
-import PropTypes from 'prop-types'
+import React, { Fragment } from 'react';
+import { StyleSheet, View, ScrollView } from 'react-native';
+import PropTypes from 'prop-types';
 
-import SubHeader from '../../Components/SubHeader'
-import NavButton from '../../Components/NavButton'
-import categoryOptions from './config'
+import SubHeader from '../../Components/SubHeader';
+import NavButton from '../../Components/NavButton';
+import categoryOptions from './config';
 
-const Categories = ({navigation}) => {
-  const {category} = navigation.state.params
-  const options = categoryOptions[category]
+const Categories = ({ navigation }) => {
+  const { category } = navigation.state.params;
+  const options = categoryOptions[category];
 
   const styles = StyleSheet.create({
     header: {
@@ -18,56 +18,54 @@ const Categories = ({navigation}) => {
       justifyContent: 'center',
     },
     NavOptions: {
-      flex:4,
+      flex: 4,
       margin: 20,
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
     },
   });
-  
+
   return (
     <Fragment>
       <View style={styles.header}>
-        <SubHeader 
-          title={options.title}
-        />
+        <SubHeader title={options.title} />
       </View>
-        <View style={styles.NavOptions}>
-          <ScrollView>
-        {
-          options.nav.map(option => {
+      <View style={styles.NavOptions}>
+        <ScrollView>
+          {options.nav.map(option => {
             return (
               <NavButton
-                key={option}
+                key={option.text}
                 option={option}
-                onClick={() => this.props.navigation.navigate(option.onPressNav, option.onPressProps)}
+                onClick={() =>
+                  navigation.navigate(option.onPressNav, option.onPressProps)
+                }
               />
-            )
-          })
-        }
-          </ScrollView>
-        </View>
+            );
+          })}
+        </ScrollView>
+      </View>
     </Fragment>
   );
-}
+};
 
 Categories.defaultProps = {
   navigation: {
     state: {
-      params: {}
-    }
-  }
-}
+      params: {},
+    },
+  },
+};
 
 Categories.propTypes = {
   navigation: PropTypes.shape({
     state: PropTypes.shape({
       params: PropTypes.shape({
-        category: PropTypes.string
-      })
-    })
-  })
-}
+        category: PropTypes.string,
+      }),
+    }),
+  }),
+};
 
-export default Categories
+export default Categories;

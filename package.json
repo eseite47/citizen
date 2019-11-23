@@ -1,5 +1,5 @@
 {
-  "name": "Citizen",
+  "name": "citizen",
   "version": "0.0.1",
   "description": "Prepare for you American citizenship test",
   "author": "Elisabeth Seite",
@@ -30,15 +30,17 @@
     ]
   },
   "dependencies": {
-    "expo": "32.0.0",
-    "prop-types": "^15.7.2",
-    "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "expo": "35.0.0",
+    "expo-font": "7.0.0",
+    "prop-types": "15.7.2",
+    "react": "16.8.3",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
+    "react-native-gesture-handler": "~1.3.0",
     "react-navigation": "3.1.2"
   },
   "devDependencies": {
     "babel-eslint": "10.0.1",
-    "babel-preset-expo": "5.0.0",
+    "babel-preset-expo": "7.0.0",
     "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-prettier": "4.1.0",
