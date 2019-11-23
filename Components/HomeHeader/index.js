@@ -1,7 +1,7 @@
 import React from 'react';
-import {StyleSheet, Text, View } from 'react-native';
-import {Font} from 'expo'
-import PropTypes from 'prop-types'
+import { StyleSheet, Text, View } from 'react-native';
+import * as Font from 'expo-font';
+import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
   header: {
@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    fontFamily: 'Charmonman Regular'
+    fontFamily: 'Charmonman Regular',
   },
 });
 
@@ -20,33 +20,29 @@ class Header extends React.Component {
 
   async componentDidMount() {
     await Font.loadAsync({
-      'Charmonman Regular': require('../../assets/fonts/Charmonman-Regular.ttf')
+      'Charmonman Regular': require('../../assets/fonts/Charmonman-Regular.ttf'),
     });
 
     this.setState({ fontLoaded: true });
   }
 
   render() {
-    const {fontLoaded} = this.state
-    const {title} = this.props
+    const { fontLoaded } = this.state;
+    const { title } = this.props;
     return (
       <View>
-        {
-          fontLoaded ? (
-            <Text style={styles.header}>{title}</Text>
-          ) : null
-        }
+        {fontLoaded ? <Text style={styles.header}>{title}</Text> : null}
       </View>
-    )
+    );
   }
 }
 
 Header.defaultProps = {
-  title: ''
-}
+  title: '',
+};
 
 Header.propTypes = {
-  title: PropTypes.string
-}
+  title: PropTypes.string,
+};
 
-export default Header
+export default Header;
