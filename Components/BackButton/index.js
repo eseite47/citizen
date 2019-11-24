@@ -1,6 +1,6 @@
 import React from 'react';
-
 import { Text, View } from 'react-native';
+import PropTypes from 'prop-types';
 
 import TouchEvent from '../TouchEvent';
 
@@ -12,6 +12,10 @@ const BackButton = ({ prevQuestion, styles }) => {
       </View>
     </TouchEvent>
   );
+};
+
+BackButton.propTypes = {
+  prevQuestion: PropTypes.func.isRequired,
 };
 
 export default BackButton;

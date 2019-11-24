@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 
 const Answer = ({ answer }) => {
-  console.log({ answer });
   const styles = StyleSheet.create({
     titleView: {
       alignItems: 'center',

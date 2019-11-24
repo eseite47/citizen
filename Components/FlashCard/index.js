@@ -2,12 +2,10 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import TouchEvent from '../TouchEvent';
 import Question from './question';
 import Answer from './answer';
 
-const Card = ({ showAnswer, currentQ, onPress }) => {
-  console.log('In my flashcard', { currentQ });
+const Card = ({ showAnswer, currentQ }) => {
   const styles = StyleSheet.create({
     header: {
       fontSize: 30,
@@ -24,32 +22,30 @@ const Card = ({ showAnswer, currentQ, onPress }) => {
 
   const { question, answer } = currentQ;
   return (
-    <TouchEvent onPress={onPress}>
-      <View style={styles.card}>
-        {showAnswer ? (
-          <Answer answer={answer} />
-        ) : (
-          <Question question={question} />
-        )}
-      </View>
-    </TouchEvent>
+    <View style={styles.card}>
+      {showAnswer ? (
+        <Answer answer={answer} />
+      ) : (
+        <Question question={question} />
+      )}
+    </View>
   );
 };
 
-// Card.defaultProps = {
-//     showAnswer: false,
-//     currentQ: {
-//         question: '',
-//         answer: ''
-//     }
-// }
+Card.defaultProps = {
+  showAnswer: false,
+  currentQ: {
+    question: '',
+    answer: '',
+  },
+};
 
-// Card.propTypes = {
-//     showAnswer: PropTypes.bool,
-//     currentQ: {
-//         question: PropTypes.String,
-//         answer: PropTypes.String
-//     }
-// }
+Card.propTypes = {
+  showAnswer: PropTypes.bool,
+  currentQ: {
+    question: PropTypes.String,
+    answer: PropTypes.String,
+  },
+};
 
 export default Card;

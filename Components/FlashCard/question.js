@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
 });
 
 const Question = ({ question }) => {
-  console.log('I SHOULD SHOW MY QUESTION', { question });
   return (
     <View>
       <View style={styles.titleView}>
@@ -37,12 +36,8 @@ const Question = ({ question }) => {
   );
 };
 
-Question.defaultProps = {
-  question: '',
-};
-
 Question.propTypes = {
-  question: PropTypes.string,
+  question: PropTypes.string.isRequired,
 };
 
 export default Question;

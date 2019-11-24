@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { StyleSheet, TouchableNativeFeedback, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import TouchEvent from '../../Components/TouchEvent';
@@ -68,7 +68,6 @@ class FlashCardView extends React.Component {
   }
 
   flipCard = () => {
-    console.log('FLIP THE CARD');
     const { showAnswer: currentSetting } = this.state;
     this.setState({ showAnswer: !currentSetting });
   };
@@ -91,11 +90,8 @@ class FlashCardView extends React.Component {
 
   render() {
     const { questions, currentIndex, showAnswer } = this.state;
-    console.log({ questions });
     const numQ = questions.length;
     const currentQ = questions[currentIndex];
-    console.log({ currentQ });
-    console.log(!currentQ);
     if (!currentQ) return null;
     return (
       <Fragment>
@@ -103,11 +99,9 @@ class FlashCardView extends React.Component {
           <SubHeader title={`${currentIndex + 1} / ${numQ}`} />
         </View>
         <View style={styles.card}>
-          <Card
-            currentQ={currentQ}
-            showAnswer={showAnswer}
-            onPress={this.flipCard}
-          />
+          <TouchEvent onPress={this.flipCard}>
+            <Card currentQ={currentQ} showAnswer={showAnswer} />
+          </TouchEvent>
         </View>
         <View style={styles.buttons}>
           <Fragment>
