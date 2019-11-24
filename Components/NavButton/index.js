@@ -1,14 +1,15 @@
 import React from 'react';
-import {StyleSheet, Text, View, TouchableNativeFeedback } from 'react-native';
-import PropTypes from 'prop-types'
+import { StyleSheet, Text, View } from 'react-native';
+import PropTypes from 'prop-types';
 
-const NavButton = ({option, onClick}) => {
+import TouchEvent from '../TouchEvent';
 
+const NavButton = ({ option, onClick }) => {
   const styles = StyleSheet.create({
     text: {
       lineHeight: 40,
       fontFamily: 'Poiret One',
-      fontSize: 25
+      fontSize: 25,
     },
     button: {
       marginBottom: 25,
@@ -18,32 +19,30 @@ const NavButton = ({option, onClick}) => {
       borderColor: '#2196F3',
       borderRadius: 4,
       borderWidth: 0.5,
-    }
+    },
   });
 
   return (
-    <TouchableNativeFeedback onPress={onClick}>
+    <TouchEvent onPress={onClick}>
       <View style={styles.button}>
-        <Text style={styles.text}>
-          {option.text}
-        </Text>
+        <Text style={styles.text}>{option.text}</Text>
       </View>
-    </TouchableNativeFeedback>
-  )
-}
+    </TouchEvent>
+  );
+};
 
 NavButton.defaultProps = {
   option: {
-    text: ''
+    text: '',
   },
-  onClick: () => {}
-}
+  onClick: () => {},
+};
 
 NavButton.propTypes = {
   option: PropTypes.shape({
-    text: PropTypes.string
-  }), 
-  onClick: PropTypes.func
-}
+    text: PropTypes.string,
+  }),
+  onClick: PropTypes.func,
+};
 
-export default NavButton
+export default NavButton;
