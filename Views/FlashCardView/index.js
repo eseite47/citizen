@@ -25,17 +25,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  backButton: {
-    margin: 15,
-    width: '30%',
-    height: 75,
-    color: '#e7e7e7',
-    borderColor: '#2196F3',
-    borderRadius: 4,
-    borderWidth: 0.5,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   forwardButton: {
     margin: 15,
     width: '50%',
@@ -99,9 +88,13 @@ class FlashCardView extends React.Component {
           <SubHeader title={`${currentIndex + 1} / ${numQ}`} />
         </View>
         <View style={styles.card}>
-          <TouchEvent onPress={this.flipCard}>
-            <Card currentQ={currentQ} showAnswer={showAnswer} />
-          </TouchEvent>
+          {/* <TouchEvent onPress={this.flipCard}> */}
+          <Card
+            currentQ={currentQ}
+            showAnswer={showAnswer}
+            onPress={this.flipCard}
+          />
+          {/* </TouchEvent> */}
         </View>
         <View style={styles.buttons}>
           <Fragment>

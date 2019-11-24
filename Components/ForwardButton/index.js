@@ -1,10 +1,28 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import TouchEvent from '../TouchEvent';
 
-const ForwardButton = ({ nextQuestion, styles }) => {
+const styles = StyleSheet.create({
+  forwardButton: {
+    margin: 15,
+    width: '50%',
+    height: 75,
+    color: 'green',
+    borderColor: '#2196F3',
+    borderRadius: 4,
+    borderWidth: 0.5,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttonText: {
+    fontSize: 30,
+    fontFamily: 'Dosis',
+  },
+});
+
+const ForwardButton = ({ nextQuestion }) => {
   return (
     <TouchEvent onPress={nextQuestion}>
       <View style={styles.forwardButton}>
