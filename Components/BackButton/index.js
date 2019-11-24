@@ -7,7 +7,7 @@ import TouchEvent from '../TouchEvent';
 const styles = StyleSheet.create({
   backButton: {
     margin: 15,
-    width: '30%',
+    flex: 3,
     height: 75,
     color: '#e7e7e7',
     borderColor: '#2196F3',

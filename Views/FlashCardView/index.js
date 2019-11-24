@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import { StyleSheet, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import TouchEvent from '../../Components/TouchEvent';
 import SubHeader from '../../Components/SubHeader';
 import Card from '../../Components/FlashCard';
 import BackButton from '../../Components/BackButton';
@@ -24,21 +23,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  forwardButton: {
-    margin: 15,
-    width: '50%',
-    height: 75,
-    color: 'green',
-    borderColor: '#2196F3',
-    borderRadius: 4,
-    borderWidth: 0.5,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  buttonText: {
-    fontSize: 30,
-    fontFamily: 'Dosis',
   },
 });
 
@@ -88,23 +72,17 @@ class FlashCardView extends React.Component {
           <SubHeader title={`${currentIndex + 1} / ${numQ}`} />
         </View>
         <View style={styles.card}>
-          {/* <TouchEvent onPress={this.flipCard}> */}
           <Card
             currentQ={currentQ}
             showAnswer={showAnswer}
             onPress={this.flipCard}
           />
-          {/* </TouchEvent> */}
         </View>
         <View style={styles.buttons}>
-          <Fragment>
-            <Fragment>
-              {currentIndex > 0 ? (
-                <BackButton prevQuestion={this.prevQuestion} styles={styles} />
-              ) : null}
-            </Fragment>
-            <ForwardButton nextQuestion={this.nextQuestion} styles={styles} />
-          </Fragment>
+          {currentIndex > 0 ? (
+            <BackButton prevQuestion={this.prevQuestion} />
+          ) : null}
+          <ForwardButton nextQuestion={this.nextQuestion} />
         </View>
       </Fragment>
     );

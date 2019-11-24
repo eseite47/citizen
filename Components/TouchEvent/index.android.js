@@ -13,7 +13,10 @@ const TouchEvent = props => {
 
 TouchEvent.propTypes = {
   onPress: PropTypes.func.isRequired,
-  children: PropTypes.func.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 };
 
 export default TouchEvent;

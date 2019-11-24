@@ -45,10 +45,10 @@ Card.defaultProps = {
 
 Card.propTypes = {
   showAnswer: PropTypes.bool,
-  currentQ: {
+  currentQ: PropTypes.shape({
     question: PropTypes.String,
     answer: PropTypes.String,
-  },
+  }),
 };
 
 export default Card;

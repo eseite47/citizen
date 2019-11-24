@@ -49,7 +49,7 @@ Answer.defaultProps = {
 };
 
 Answer.propTypes = {
-  answer: PropTypes.string,
+  answer: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Answer;
