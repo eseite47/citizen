@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import TouchEvent from '../TouchEvent';
+// import TouchEvent from '../TouchEvent';
 import Question from './question';
 import Answer from './answer';
 
@@ -23,15 +23,15 @@ const Card = ({ showAnswer, currentQ, onPress }) => {
 
   const { question, answer } = currentQ;
   return (
-    <TouchEvent onPress={onPress}>
-      <View style={styles.card}>
-        {showAnswer ? (
-          <Answer answer={answer} />
-        ) : (
-          <Question question={question} />
-        )}
-      </View>
-    </TouchEvent>
+    // <TouchEvent onPress={onPress}>
+    <View style={styles.card}>
+      {showAnswer ? (
+        <Answer answer={answer} />
+      ) : (
+        <Question question={question} />
+      )}
+    </View>
+    // </TouchEvent>
   );
 };
 

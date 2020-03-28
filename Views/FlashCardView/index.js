@@ -6,6 +6,7 @@ import SubHeader from '../../Components/SubHeader';
 import Card from '../../Components/FlashCard';
 import BackButton from '../../Components/BackButton';
 import ForwardButton from '../../Components/ForwardButton';
+import ShowAnswerButton from '../../Components/ShowAnswerButton';
 import getQuestions from '../../utils/getQuestions';
 
 const styles = StyleSheet.create({
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   card: {
-    flex: 4,
+    flex: 3,
   },
   buttons: {
     flex: 1,
@@ -75,8 +76,11 @@ class FlashCardView extends React.Component {
           <Card
             currentQ={currentQ}
             showAnswer={showAnswer}
-            onPress={this.flipCard}
+            // onPress={this.flipCard}
           />
+        </View>
+        <View style={styles.button}>
+          <ShowAnswerButton flipCard={this.flipCard} showAnswer={showAnswer} />
         </View>
         <View style={styles.buttons}>
           {currentIndex > 0 ? (
