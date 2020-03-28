@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
   forwardButton: {
     margin: 15,
     flex: 5,
-    // width: '50%',
     height: 75,
     color: 'green',
     borderColor: '#2196F3',

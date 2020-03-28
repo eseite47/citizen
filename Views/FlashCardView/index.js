@@ -73,11 +73,7 @@ class FlashCardView extends React.Component {
           <SubHeader title={`${currentIndex + 1} / ${numQ}`} />
         </View>
         <View style={styles.card}>
-          <Card
-            currentQ={currentQ}
-            showAnswer={showAnswer}
-            // onPress={this.flipCard}
-          />
+          <Card currentQ={currentQ} showAnswer={showAnswer} />
         </View>
         <View style={styles.button}>
           <ShowAnswerButton flipCard={this.flipCard} showAnswer={showAnswer} />

@@ -2,11 +2,10 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-// import TouchEvent from '../TouchEvent';
 import Question from './question';
 import Answer from './answer';
 
-const Card = ({ showAnswer, currentQ, onPress }) => {
+const Card = ({ showAnswer, currentQ }) => {
   const styles = StyleSheet.create({
     header: {
       fontSize: 30,
@@ -23,7 +22,6 @@ const Card = ({ showAnswer, currentQ, onPress }) => {
 
   const { question, answer } = currentQ;
   return (
-    // <TouchEvent onPress={onPress}>
     <View style={styles.card}>
       {showAnswer ? (
         <Answer answer={answer} />
@@ -31,7 +29,6 @@ const Card = ({ showAnswer, currentQ, onPress }) => {
         <Question question={question} />
       )}
     </View>
-    // </TouchEvent>
   );
 };
 
