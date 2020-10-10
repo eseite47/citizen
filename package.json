@@ -54,7 +54,7 @@
     "eslint-plugin-react-native": "3.10.0",
     "husky": "4.3.0",
     "lint-staged": "8.1.5",
-    "prettier": "1.17.0"
+    "prettier": "2.1.2"
   },
   "private": true,
   "snyk": true
