@@ -42,7 +42,7 @@
     "snyk": "^1.316.1"
   },
   "devDependencies": {
-    "babel-eslint": "10.0.1",
+    "babel-eslint": "10.1.0",
     "babel-preset-expo": "7.0.0",
     "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.0",
