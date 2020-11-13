@@ -1,22 +1,23 @@
 import React from 'react';
-import {createStackNavigator, createAppContainer} from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
-import HomePage from './Views/HomePage'
-import CatergoryOptions from './Views/CategoryOptions'
-import FlashCardView from './Views/FlashCardView'
-import Finish from './Views/Finish'
+import HomePage from './Views/HomePage';
+import CatergoryOptions from './Views/CategoryOptions';
+import FlashCardView from './Views/FlashCardView';
+import Finish from './Views/Finish';
 
 const MainNavigator = createStackNavigator({
-  Home: {screen: HomePage},
-  CatergoryOptions: {screen: CatergoryOptions},
-  FlashCardView : {screen: FlashCardView},
-  Finish: {screen: Finish}
+  Home: { screen: HomePage },
+  CatergoryOptions: { screen: CatergoryOptions },
+  FlashCardView: { screen: FlashCardView },
+  Finish: { screen: Finish },
 });
 
 const AppContainer = createAppContainer(MainNavigator);
 
 const App = () => {
   return <AppContainer />;
-}
+};
 
-export default App
+export default App;
