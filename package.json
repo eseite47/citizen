@@ -43,7 +43,7 @@
     "react-native-screens": "^2.14.0",
     "react-navigation": "4.4.3",
     "react-navigation-stack": "^2.10.1",
-    "snyk": "1.425.3"
+    "snyk": "1.438.0"
   },
   "devDependencies": {
     "babel-eslint": "10.1.0",
